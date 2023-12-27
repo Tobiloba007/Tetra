@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from 'react-router-dom'
 
 const HomeIntro = () => {
   return (
@@ -48,9 +49,11 @@ const HomeIntro = () => {
                 <p className='text-[33px] text-[#11105B] font-bold tracking-wide mt-6 md:text-[45px] pr-28 leading-11 lg:pr-36 lg:leading-[60px] xl:pr-0'>
                     Certificate Confirmation made Easy!
                 </p>
-                <button className='text-white bg-[#11105B] w-40 h-9 text-[13px] mt-7 md:h-[38px] md:w-[10.5rem] lg:mt-9 lg:h-[40px] xl:text-[15px]'>
-                    Learn More
-                </button>
+                <Link to='/login'>
+                   <button className='text-white bg-[#11105B] w-40 h-9 text-[13px] mt-7 md:h-[38px] md:w-[10.5rem] lg:mt-9 lg:h-[40px] xl:text-[15px]'>
+                       Log In
+                   </button>
+                </Link>
             </div>
         </div>
 

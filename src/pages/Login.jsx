@@ -28,16 +28,22 @@ const Login = () => {
         // Email validation
         if (!email.trim()) {
           formErrors.email = 'Email is required';
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-          formErrors.email = 'Invalid email address';
+        } else if (email !== 'Francis@tetramaritime.com' && email !== 'Oluwatobi@tetrafoundation.com'){
+            formErrors.email = 'Invalid email address';
         }
+        // else if (!/\S+@\S+\.\S+/.test(email)) {
+        //   formErrors.email = 'Invalid email address';
+        // }
     
         // Password validation
         if (!password.trim()) {
           formErrors.password = 'Password is required';
-        } else if (password.length < 6) {
-          formErrors.password = 'Password must be at least 6 characters long';
+        } else if (password !== 'Francis12' && password !== 'Tobi15'){
+            formErrors.password = 'Incorrect password';
         }
+        // else if (password.length < 6) {
+        //   formErrors.password = 'Password must be at least 6 characters long';
+        // }
     
         setErrors(formErrors);
     
