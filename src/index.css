@@ -16,3 +16,15 @@
   }
 }
 
+
+.swiper-custom-bullet {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+  }
+  
+  .swiper-custom-bullet.swiper-custom-bullet-active {
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+  }

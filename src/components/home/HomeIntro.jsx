@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import ghana from '../../assets/icons/Ghana.png'
 import gambia from '../../assets/icons/Gambia.png'
 import sierrialeone from '../../assets/icons/SierriaLeone.png'
@@ -11,16 +11,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Navigation, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom'
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import '../../../src/index.css'
+
 
 const HomeIntro = () => {
+    const swiperRef = useRef();
+
+
   return (
-    <div className='w-full flex items-center justify-center font-lexend mt-20 lg:mt-0'>
+    <div className='flex items-center justify-center font-lexend mt-20 lg:mt-0'>
        <Swiper
-        spaceBetween={0}
-        centeredSlides={true}
-        direction={"horizontal"}
+        slidesPerView={1}
+        spaceBetween={175}
         loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+        modules={[Pagination, Navigation]}
+        className=''
        >
 
       <SwiperSlide>
@@ -57,10 +71,10 @@ const HomeIntro = () => {
             </div>
         </div>
 
-        <div className="flex items-center justify-center w-full h-[50%] bg-cover bg-center mt-4 lg:top-0 lg:h-full lg:mt-2 lg:ml-60 lg:w-[78%] 
-                         xl:ml-[720px] xl:w-[55%] xl:h-[65%] xl:mt-[30px]"  style={{backgroundImage: `url(${bgImg})`}}>
-           <div className='flex items-start mt-16 h-[25rem] ml-[-80px] md:h-[26rem] lg:h-[27rem] lg:ml-0 lg:absolute lg:top-7 lg:w-[63%] lg:right-0 xl:w-[50%] xl:top-7'>
-               <img className='w-full h-full object-cover xl:object-contain'
+        <div className="flex items-center justify-center w-full h-[50%] bg-cover bg-center mt-4 lg:flex-row lg:justify-end lg:h-full lg:ml-52 lg:mt-[-25px] lg:w-[87%] 
+                          xl:w-[52.5%] xl:h-[65%] xl:mt-[-50px]"  style={{backgroundImage: `url(${bgImg})`}}>
+           <div className='flex items-start mt-16 h-[25rem] ml-[-80px] md:h-[26rem] lg:h-[27rem] lg:w-[65%] xl:w-[100%] xl:top-7'>
+               <img className='w-full h-full object-cover xl:object-contain lg:mt-16 lg:ml-5 xl:ml-16 xl:mt-24'
                src={slide_pic2} alt="carousel-1" />
            </div>
         </div>
@@ -111,6 +125,16 @@ const HomeIntro = () => {
         </SwiperSlide>
 
         </Swiper>
+
+        <div className='absolute z-50 flex flex-row items-center justify-between w-full px-3 mt-[-100px] md:mt-[-75px] lg:mt-[-5px] lg:px-8 xl:px-12'>
+           <button onClick={() => swiperRef.current?.slidePrev()}>
+               <SlArrowLeft className='text-[#7F7F7F] active:focus:text-red-600 font-bold md:text-3xl lg:text-2xl' />
+           </button>
+           <button onClick={() => swiperRef.current?.slideNext()}>
+               <SlArrowRight className='text-[#000000] font-bold md:text-3xl lg:text-2xl' />
+           </button>
+        </div>
+
    </div>
   )
 }

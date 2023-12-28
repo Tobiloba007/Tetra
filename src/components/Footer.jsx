@@ -11,15 +11,23 @@ const Footer = () => {
                     lg:relative lg:top-[12rem] xl:pb-16'>
         <div className='flex flex-col items-start justify-start w-full md:w-[30%] xl:w-[25%]'>
             <div className='flex flex-row items-center justify-start'>
+              <a href="https://twitter.com/waecdigitalcert">
                 <SiTwitter className='w-[19px] h-[19px] mr-5 text-[#11105B] lg:w-[25px] lg:h-[25px]' />
+              </a>
+              <a href="https://www.instagram.com/thewaecdigitalcertificate/">
                 <RxInstagramLogo className='w-[19px] h-[19px] mr-5 text-[#11105B] lg:w-[25px] lg:h-[25px]' />
+              </a>
+              <a href="https://www.linkedin.com/company/waec-digital-certificate/">
                 <FaLinkedinIn className='w-[19px] h-[19px] mr-5 text-[#11105B] lg:w-[25px] lg:h-[25px]' />
+              </a>
+              <a href="https://web.facebook.com/thewaecdigitalcertificate?_rdc=1&_rdr">
                 <FaFacebookSquare className='w-[19px] h-[19px] mr-5 text-[#11105B] lg:w-[25px] lg:h-[25px]' />
+              </a>
             </div>
             <div className='flex flex-row items-center justify-start flex-wrap mt-4'>
                 <div className='flex flex-row items-center justify-center'>
                   <a className='text-[13px] text-[#303030] font-normal underline'
-                  href="#">
+                  href="support@waec.org">
                       Email Us
                   </a>
                   <RxDividerVertical className='mx-[-2px]' />

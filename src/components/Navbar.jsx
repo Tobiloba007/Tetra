@@ -40,11 +40,11 @@ const Navbar = () => {
                        How It Works
                    </Link>
                 </div>
-                <div className='mb-3.5'>
+                {/* <div className='mb-3.5'>
                    <Link className='text-sm text-[#707070] font-normal font-lexend'>
                        Blog
                    </Link>
-                </div>
+                </div> */}
                 <div className='mb-2.5'>
                    <Link to='/faq'
                         className='text-sm text-[#707070] font-normal font-lexend'>
@@ -67,9 +67,9 @@ const Navbar = () => {
                      className='text-sm text-[#707070] font-medium lg:font-normal hover:text-[#212529] active:text-[#212529]'>
                     How It Works
                 </Link>
-                <Link className='text-sm text-[#707070] font-medium lg:font-normal hover:text-[#212529] active:text-[#212529]'>
+                {/* <Link className='text-sm text-[#707070] font-medium lg:font-normal hover:text-[#212529] active:text-[#212529]'>
                     Blog
-                </Link>
+                </Link> */}
                 <Link to='/faq'
                      className='text-sm text-[#707070] font-medium lg:font-normal hover:text-[#212529] active:text-[#212529]'>
                     FAQs
